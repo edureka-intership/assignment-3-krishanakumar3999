@@ -1,0 +1,22 @@
+class restaurantManager {
+
+    restaurantList = [
+        { name: "KFC", Address: "Lajpat Nagar", city: "Jaipur" },
+        { name: "Subway", Address: "Lodhi Colony", city: "Mumbai" },
+        { name: "Domino'z", Address: "South Extension", city: "New Delhi" }
+    ];
+
+    printAllRestaurantNames() {
+        this.restaurantList.forEach((restro) => {
+            console.log(restro.name);
+        });
+    }
+
+    filterRestaurantByCity(city) { 
+            return this.restaurantList.filter(item=>item.city==city);
+		}
+}
+
+let obj = new restaurantManager();
+obj.printAllRestaurantNames();
+obj.filterRestaurantByCity("New Delhi");
